@@ -1,5 +1,5 @@
 #Challenge 1
-""""
+
 while True:
 
     try:
@@ -18,7 +18,7 @@ for i in range(length):
         list_of_numbers.append(list_of_numbers[-1] + number)
 print(f"the list is :{list_of_numbers}")  
 
-"""
+
 
 #Challenge 2
 
