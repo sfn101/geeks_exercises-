@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+
+{%block head%}
+    <title>Edit Task</title>
+{%endblock%}
+
+{%block body%}
+<main class="container flex flex-col justify-center items-center mx-auto p-4">
+    <h1 class="text-3xl font-bold underline">Edit Task</h1>
+
+    <section class="mt-4">
+        <form id="updateForm" class="flex space-x-2">
+            <input type="text" id="content" name="content" value="{{ task.content }}" class="border p-2 rounded" required>
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Update</button>
+            <a href="{{ url_for('index') }}" class="bg-gray-500 text-white p-2 rounded">Cancel</a>
+        </form>
+    </section>
+</main>
+
+<script>
+document.getElementById('updateForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData();
+    formData.append('content', document.getElementById('content').value);
+
+    fetch(`/update/{{ task.id }}`, {
+        method: 'PUT',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = '/';
+        }
+    });
+});
+</script>
+{%endblock%}
