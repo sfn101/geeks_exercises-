@@ -3,11 +3,16 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from datetime import datetime, UTC
 from markupsafe import escape
+import os
+from dotenv import load_dotenv
 
+
+load_dotenv() 
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///site.db')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 class Todo(db.Model):
@@ -61,4 +66,4 @@ def delete(id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

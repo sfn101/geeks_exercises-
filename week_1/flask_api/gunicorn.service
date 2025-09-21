@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve Flask Todo App
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/your/flask_api
+Environment="PATH=/path/to/your/flask_api/.venv/bin"
+ExecStart=/path/to/your/flask_api/.venv/bin/gunicorn --workers 3 --bind unix:flask_api.sock -m 007 app:app
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
