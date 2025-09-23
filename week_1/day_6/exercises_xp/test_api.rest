@@ -5,8 +5,7 @@
 GET http://127.0.0.1:5000
 
 ##### get all students
-GET http://127.0.0.1:5000/students?page=2&limit=3
-
+GET http://127.0.0.1:5000/students
 ##### get student by id
 GET http://127.0.0.1:5000/students/1
 
@@ -15,21 +14,24 @@ POST http://127.0.0.1:5000/students
 Content-Type: application/json
 
 {
-    "id": 22,
-    "name": "Jake Doe",
-    "email": "jake.doe@example.com",
+    "id": 88,
+    "name": "sarah geeks",
+    "email": "sarah.geeks@example.com",
     "age": 25,
-    "gender": "male"
+    "gender": "female"
 }
 
 ##### get student by id to verify addition
-GET http://127.0.0.1:5000/students/22
+GET http://127.0.0.1:5000/students/88
 
 ##### update student by id
-PUT http://127.0.0.1:5000/students/22
+PUT http://127.0.0.1:5000/students/88
 Content-Type: application/json
 
 {
     "age": 26,
     "name": "soufiane amabraa"
 }
+
+##### get student by id to verify update
+DELETE http://127.0.0.1:5000/students/88

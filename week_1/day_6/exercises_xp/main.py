@@ -48,7 +48,7 @@ def home():
 @main.route("/students", methods=["GET"])
 def get_students():
     page = int(request.args.get('page', 1))
-    limit = int(request.args.get('limit', 3))
+    limit = int(request.args.get('limit', 99))
     start = (page - 1) * limit
     end = start + limit
     return jsonify(students[start:end])
