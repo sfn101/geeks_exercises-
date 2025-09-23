@@ -5,7 +5,7 @@
 GET http://127.0.0.1:5000
 
 ##### get all students
-GET http://127.0.0.1:5000/students
+GET http://127.0.0.1:5000/students?page=1&limit=2
 ##### get student by id
 GET http://127.0.0.1:5000/students/1
 
