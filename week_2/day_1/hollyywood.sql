@@ -74,3 +74,30 @@ RETURNING
 --- delete actor
 DELETE FROM actors 
     WHERE actor_id=18
+;
+
+TRUNCATE TABLE actors
+    RESTART IDENTITY;
+
+
+INSERT INTO actors (first_name, last_name, age, number_oscars)
+VALUES('Matt','Damon','08/10/1970', 5);
+
+INSERT INTO actors (first_name, last_name, age, number_oscars)
+VALUES('George','Clooney','06/05/1961', 2);
+
+INSERT INTO actors (first_name, last_name, age, number_oscars)
+VALUES('Emma','Watson','04/15/1990', 0);
+
+INSERT INTO actors (first_name, last_name, age, number_oscars)
+VALUES('Meryl','Streep','06/22/1949', 2);
+
+INSERT INTO actors (first_name, last_name, age, number_oscars) VALUES
+('Leonardo','DiCaprio','11/11/1974', 1),
+('Denzel','Washington','12/28/1954', 2),
+('Scarlett','Johansson','11/22/1984', 0);
+
+
+-- retrieve all actors ordered by first name descending
+SELECT * FROM actors
+    ORDER BY first_name ASC;
