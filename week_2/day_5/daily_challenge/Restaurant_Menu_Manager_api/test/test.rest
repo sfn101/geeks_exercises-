@@ -1,0 +1,27 @@
+@url = http://localhost:5000/api/menu
+
+### Get all menu items
+GET {{url}}/items
+
+### Get a specific menu item by ID
+GET {{url}}/items/3
+
+### Create a new menu item
+POST {{url}}/items
+Content-Type: application/json
+
+{
+    "item_name": "  Pasta  Carbonara ",
+    "item_price": 12.99
+}
+### Update an existing menu item
+PUT {{url}}/items/3
+Content-Type: application/json
+
+{
+    "item_name": "Caesar Salad",
+    "item_price": 10.99
+}
+
+### Delete a menu item
+DELETE {{url}}/items/9
