@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+const sentence = "The movie is not that bad, I like it";
+
+const wordNot = sentence.indexOf("not");
+const wordBad = sentence.indexOf("bad");
+
+if (wordNot !== -1 && wordBad !== -1 && wordBad > wordNot) {
+  const before = sentence.slice(0, wordNot);
+  const after = sentence.slice(wordBad + 3); // +3
+  const result = before + "good" + after;
+  console.log(result);
+} else {
+  console.log(sentence);
+}
+
+    </script>
+</body>
+</html>
