@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        console.log("----------Exercise 1 : display numbers divisible by 23----------")
+        function displayNumbersDivisible(divisor = 23) {   
+            let numbers = [];
+            for (let i = 0; i <= 500; i++) {
+                if(i % divisor === 0) {
+                    numbers.push(i);
+                }
+            }
+            console.log(numbers);
+
+            const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+            console.log(`the sum of numbers divisible by ${divisor} is: ${sum}`);
+        }
+        displayNumbersDivisible(44);
+
+
+
+        console.log("----------Exercise 2 : Shopping List----------");
+
+        const stock = { 
+            "banana": 6, 
+            "apple": 0,
+            "pear": 12,
+            "orange": 32,
+            "blueberry":1
+        }  
+
+        const prices = {    
+            "banana": 4, 
+            "apple": 2, 
+            "pear": 1,
+            "orange": 1.5,
+            "blueberry":10
+        } 
+        const shoppingList = ["banana", "orange", "apple"];
+        function myBill() {
+            let total = 0;
+            for (let item of shoppingList) {
+                if (stock[item] > 0) {
+                    total += prices[item];
+                    stock[item]--;
+                }
+            }
+            return total;
+        }
+        console.log(`The total price of your shopping list is: $${myBill()}`);
+        console.log("----------Exercise 3 : What’s in my wallet ?----------");
+        function changeEnough(itemPrice, amountOfChange) {
+            const changeValues = [0.25, 0.10, 0.05, 0.01];
+            let totalChange = 0;
+            for (let i = 0; i < amountOfChange.length; i++) {
+                totalChange += amountOfChange[i] * changeValues[i];
+            }
+            return totalChange >= itemPrice;
+        }
+        console.log(changeEnough(4.25, [25, 20, 5, 0])); 
+        console.log(changeEnough(14.11, [2,100, 0,0]));
+
+        console.log("----------Exercise 4 : Vacations Costs----------");    
+
+        function hotelCost(nights) {
+            
+            return nights * 140;
+        }
+
+        function planeRideCost(destination) {
+           
+            switch (destination) {
+                case "london":
+                    return 183;
+                case "paris":
+                    return 220;
+                default:
+                    return 300;
+            }
+        }
+
+        function rentalCarCost(days) {
+            let cost = days * 40;
+            if (days > 10) {
+                cost *= 0.95; 
+            }
+            return cost;
+        }
+
+        function totalVacationCost() {
+            let nights;
+            do {
+                nights = parseInt(prompt("How many nights would you like to stay at the hotel?"));
+            } while (isNaN(nights) || nights < 0);
+            let destination;
+            do {
+                destination = prompt("What is your destination?").toLowerCase();
+            } while (!destination || !isNaN(destination));
+            let days;
+            do {
+                days = parseInt(prompt("How many days would you like to rent the car?"));
+            } while (isNaN(days) || days < 0);
+            const hotel = hotelCost(nights);
+            const plane = planeRideCost(destination);
+            const car = rentalCarCost(days);
+            const total = hotel + plane + car;
+            console.log(`The car cost: $${car}, the hotel cost: $${hotel}, the plane tickets cost: $${plane}.`);
+            console.log(`Total vacation cost: $${total}`);
+            return total;
+        }
+        totalVacationCost();
+        
+        
+
+
+    </script>
+</body>
+</html>
