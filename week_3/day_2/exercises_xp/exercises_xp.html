@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Combined Exercises</title>
 </head>
+
 <body>
-    
 
+    <!-- ========== EXERCISE 5 CONTENT ========== -->
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
 
+    <!-- ========== EXERCISE 6 CONTENT ========== -->
+    <div id="navBar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Friends</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">My Pics</a></li>
+        </ul>
+    </div>
+
+    <!-- ========== EXERCISE 7 CONTENT ========== -->
+    <section class="listBooks"></section>
+
+    <!-- ========== INLINE EXERCISES (1-4) ========== -->
     <script>
         console.log("----------Exercise 1 : display numbers divisible by 23----------")
-        function displayNumbersDivisible(divisor = 23) {   
+        function displayNumbersDivisible(divisor = 23) {
             let numbers = [];
             for (let i = 0; i <= 500; i++) {
-                if(i % divisor === 0) {
+                if (i % divisor === 0) {
                     numbers.push(i);
                 }
             }
@@ -29,21 +56,21 @@
 
         console.log("----------Exercise 2 : Shopping List----------");
 
-        const stock = { 
-            "banana": 6, 
+        const stock = {
+            "banana": 6,
             "apple": 0,
             "pear": 12,
             "orange": 32,
-            "blueberry":1
-        }  
+            "blueberry": 1
+        }
 
-        const prices = {    
-            "banana": 4, 
-            "apple": 2, 
+        const prices = {
+            "banana": 4,
+            "apple": 2,
             "pear": 1,
             "orange": 1.5,
-            "blueberry":10
-        } 
+            "blueberry": 10
+        }
         const shoppingList = ["banana", "orange", "apple"];
         function myBill() {
             let total = 0;
@@ -56,7 +83,7 @@
             return total;
         }
         console.log(`The total price of your shopping list is: $${myBill()}`);
-        console.log("----------Exercise 3 : What’s in my wallet ?----------");
+        console.log("----------Exercise 3 : What's in my wallet ?----------");
         function changeEnough(itemPrice, amountOfChange) {
             const changeValues = [0.25, 0.10, 0.05, 0.01];
             let totalChange = 0;
@@ -65,18 +92,18 @@
             }
             return totalChange >= itemPrice;
         }
-        console.log(changeEnough(4.25, [25, 20, 5, 0])); 
-        console.log(changeEnough(14.11, [2,100, 0,0]));
+        console.log(changeEnough(4.25, [25, 20, 5, 0]));
+        console.log(changeEnough(14.11, [2, 100, 0, 0]));
 
-        console.log("----------Exercise 4 : Vacations Costs----------");    
+        console.log("----------Exercise 4 : Vacations Costs----------");
 
         function hotelCost(nights) {
-            
+
             return nights * 140;
         }
 
         function planeRideCost(destination) {
-           
+
             switch (destination) {
                 case "london":
                     return 183;
@@ -90,7 +117,7 @@
         function rentalCarCost(days) {
             let cost = days * 40;
             if (days > 10) {
-                cost *= 0.95; 
+                cost *= 0.95;
             }
             return cost;
         }
@@ -117,10 +144,11 @@
             return total;
         }
         totalVacationCost();
-        
-        
-
-
     </script>
+
+    <!-- ========== COMBINED EXTERNAL SCRIPTS ========== -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
