@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Exercise</title>
+</head>
+
+<body>
+
+  <h1>Form Exercise 1</h1>
+  <h2>GET Request</h2>
+  <form action="/" method="get">
+    <div>
+      <label for="name-input">Name:</label>
+      <input type="text" id="name-input" name="username">
+    </div>
+    <br>
+    <div>
+      <label for="message-input">Message:</label>
+      <textarea id="message-input" name="usermessage" rows="6" cols="30"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Send">
+    </div>
+  </form>
+
+  <h3>Q&A</h3>
+  <ul>
+    <li>Q: Where will the sent data appear?
+    </li>
+    <li>A: The sent data will appear in the URL as query parameters since the form method is set to "get". For
+      example,
+      `?username=John&usermessage=Hello`.</li>
+  </ul>
+
+  <h2>POST Request</h2>
+  <form action="/" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <br>
+    <div>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="6" cols="30"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="submit" value="Send">
+    </div>
+  </form>
+
+  <h3>Q&A</h3>
+  <ul>
+    <li>Q: Where will the sent data appear?
+    </li>
+    <li>A: The sent data will be included in the body of the HTTP request and will not be visible in the URL.</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
