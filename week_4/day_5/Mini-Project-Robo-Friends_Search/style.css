@@ -1,0 +1,109 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0c1c3c;
+    /* IMPORTANT: Make sure you saved the image as 'circuit-pattern.png' in the same folder */
+    background-image: url('circuit-pattern.png');
+    background-repeat: repeat;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header and Title */
+.header {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #a4f5f5;
+    text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.5);
+}
+
+/* Search Box */
+.search-container {
+    margin: 20px 0;
+}
+
+#search-box {
+    width: 300px;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    border: 2px solid #5ff2f2;
+    border-radius: 8px;
+    background-color: #0e244d;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-box::placeholder {
+    color: #88a1d4;
+}
+
+#search-box:focus {
+    box-shadow: 0 0 15px rgba(95, 242, 242, 0.7);
+}
+
+/* Robot Card Grid Container */
+.robot-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual Robot Card */
+.robot-card {
+    background-color: #1e6091;
+      background-image: url('card-pattern.png');
+    background-repeat: repeat;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.robot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(95, 242, 242, 0.4);
+}
+
+/* Robot Image Container (for circular frame) */
+.img-container {
+    background-color: #0c1c3c;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 3px solid #5ff2f2;
+}
+
+.robot-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Robot Info Text */
+.robot-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    color: #ffffff;
+}
+
+.robot-card p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #a4f5f5;
+    word-wrap: break-word; /* Prevents long emails from overflowing */
+}
