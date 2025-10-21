@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise API</title>
+</head>
+
+<body>
+
+  <form id="sunriseForm">
+    <h3>City 1 (Paris)</h3>
+    <div>
+      <label for="lat1">Latitude 1:</label>
+      <input type="text" id="lat1" value="48.864716">
+    </div>
+    <div>
+      <label for="lng1">Longitude 1:</label>
+      <input type="text" id="lng1" value="2.349014">
+    </div>
+
+    <h3>City 2 (New York)</h3>
+    <div>
+      <label for="lat2">Latitude 2:</label>
+      <input type="text" id="lat2" value="40.730610">
+    </div>
+    <div>
+      <label for="lng2">Longitude 2:</label>
+      <input type="text" id="lng2" value="-73.935242">
+    </div>
+    <button type="submit">Get Sunrise Times</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
