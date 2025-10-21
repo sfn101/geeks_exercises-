@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gifs finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #eafffd;
+    }
+
+    .panle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      input[type="text"] {
+        padding: 12px 10px;
+        width: 250px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        margin-left: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 20px;
+        background-color: #00ccff;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      }
+
+      #delete-all {
+        background-color: #ff4d4d;
+      }
+
+    }
+
+    #gif-container {
+      margin: 80px auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+    }
+
+    #gif-container img {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .gif-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+
+      button {
+        margin-top: 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 15px;
+        background-color: #ff4d4d;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="panle">
+    <h1>Gifs Finder</h1>
+    <form action="" method="get" id="gif-form">
+      <input type="text" id="search-input" placeholder="Search for gifs..." required>
+      <button type="submit">Search</button>
+      <button type="button" id="delete-all">Delete All</button>
+
+    </form>
+  </header>
+  <main id="gif-container"></main>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
