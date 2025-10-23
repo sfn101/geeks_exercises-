@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Pokemon Logo" class="logo">
+    </header>
+    <main>
+        <div class="pokedex-container">
+            <div class="search-container">
+                <input type="text" id="pokemon-search" placeholder="Enter Pokemon name or ID">
+                <button id="search-btn">Search</button>
+                <div class="button-container">
+                    <button id="prev-btn">Previous</button>
+                    <button id="random-btn">Random</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+            <div class="pokemon-display">
+                <div id="loading" class="loading">Loading...</div>
+                <img id="pokemon-image" src="" alt="Pokemon Image">
+            </div>
+            <div class="pokemon-info">
+                <h2 id="pokemon-name">Pokemon Name</h2>
+                <p id="pokemon-id">ID: </p>
+                <p id="pokemon-height">Height: </p>
+                <p id="pokemon-weight">Weight: </p>
+                <div class="types" id="pokemon-types"></div>
+                <div class="stats" id="pokemon-stats"></div>
+                <div class="abilities" id="pokemon-abilities"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

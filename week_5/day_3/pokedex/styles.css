@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ff0000;
+}
+
+.logo {
+    height: 80px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pokedex-container {
+    position: relative;
+    width: 900px;
+    height: 800px;
+    background-image: url('pokedex.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 10px;
+    z-index: 2;
+}
+
+#pokemon-search {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-btn:hover {
+    background-color: #cc0000;
+}
+
+#prev-btn, #random-btn, #next-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #959595;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#random-btn {
+    position: absolute;
+    background-color: #77cc55;
+    top: 525px ;
+    left: 137%;
+    
+}
+#prev-btn {
+    position: absolute;
+    top: 525px ;
+    right: 130%;
+    
+}
+#next-btn {
+    position: absolute;
+    top: 525px ;
+    right: 105%;
+    
+}
+
+#prev-btn:hover, #random-btn:hover, #next-btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+.pokemon-display {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+}
+
+.loading {
+    display: none;
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.pokemon-info {
+    width: 350px;
+    min-height: 200px;
+    position: absolute;
+    top: 55% ;
+    left: 32%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#pokemon-name {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+#pokemon-id, #pokemon-height, #pokemon-weight {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#pokemon-image {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.type {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.stats {
+    margin: 10px 0;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.abilities {
+    margin: 10px 0;
+}
+
+.ability {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+}
+
+/* Type colors */
+.fire { background-color: #ff4422; }
+.water { background-color: #3399ff; }
+.grass { background-color: #77cc55; }
+.electric { background-color: #ffcc33; }
+.psychic { background-color: #ff5599; }
+.ice { background-color: #66ccff; }
+.dragon { background-color: #7766ee; }
+.dark { background-color: #775544; }
+.fairy { background-color: #ffaaee; }
+.normal { background-color: #aaaa99; }
+.fighting { background-color: #bb5544; }
+.poison { background-color: #aa5599; }
+.ground { background-color: #ddbb55; }
+.flying { background-color: #8899ff; }
+.bug { background-color: #aabb22; }
+.rock { background-color: #bbaa66; }
+.ghost { background-color: #6666bb; }
+.steel { background-color: #aaaabb; }
