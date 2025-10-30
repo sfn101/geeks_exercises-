@@ -1,0 +1,103 @@
+@baseUrl = http://localhost:3000
+
+### Get all posts
+GET {{baseUrl}}/posts
+
+###
+
+### Get post by ID (existing post)
+GET {{baseUrl}}/posts/1
+
+###
+
+### Get post by ID (non-existing post)
+GET {{baseUrl}}/posts/999
+
+###
+
+### Create a new post
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "Third Post",
+    "content": "This is the third post content."
+}
+
+###
+
+### Create another new post
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "Fourth Post",
+    "content": "This is the fourth post with more detailed content."
+}
+
+###
+
+### Update an existing post (full update)
+PUT {{baseUrl}}/posts/1
+Content-Type: application/json
+
+{
+    "title": "Updated First Post",
+    "content": "This is the updated content for the first post."
+}
+
+###
+
+### Update an existing post (partial update - title only)
+PUT {{baseUrl}}/posts/2
+Content-Type: application/json
+
+{
+    "title": "Updated Second Post Title"
+}
+
+###
+
+### Update an existing post (partial update - content only)
+PUT {{baseUrl}}/posts/2
+Content-Type: application/json
+
+{
+    "content": "Updated content for the second post."
+}
+
+###
+
+### Update a non-existing post
+PUT {{baseUrl}}/posts/999
+Content-Type: application/json
+
+{
+    "title": "Non-existing Post",
+    "content": "This should return 404."
+}
+
+###
+
+### Delete an existing post
+DELETE {{baseUrl}}/posts/1
+
+###
+
+### Delete a non-existing post
+DELETE {{baseUrl}}/posts/999
+
+###
+
+### Test invalid route (404 error)
+GET {{baseUrl}}/invalid-route
+
+###
+
+### Test another invalid route
+POST {{baseUrl}}/invalid-endpoint
+Content-Type: application/json
+
+{
+    "test": "data"
+}
